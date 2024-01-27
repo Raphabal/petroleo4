@@ -16,6 +16,20 @@ import streamlit as st
 from streamlit.logger import get_logger
 
 LOGGER = get_logger(__name__)
+st.write("# MVP Petroleo! :oil_drum: ")
+petroleo_base = pd.read_csv("https://raw.githubusercontent.com/Raphabal/techchallenge04deploy/main/BDBase.csv", sep=';')
+previsao_base = pd.read_csv("https://raw.githubusercontent.com/Raphabal/techchallenge04deploy/main/base_predicao.csv", sep=';')
+
+st.write("## Grafico de preços do petroleo ao longo dos anos! :chart_with_upwards_trend:")
+st.line_chart(data=petroleo_base['valor'])
+#st.line_chart(data=petroleo_base)
+
+st.write("## Grafico previsao! :chart:")
+st.line_chart(data=previsao_base['yhat'])
+
+st.write(" Tabela de preços do petroleo ao longo dos anos! :dollar:")
+st.dataframe(data=petroleo_base['valor'])
+st.dataframe(previsao_base['yhat'])
 
 
 def run():
