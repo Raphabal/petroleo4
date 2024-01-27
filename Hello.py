@@ -18,7 +18,7 @@ import pandas as pd
 
 LOGGER = get_logger(__name__)
 st.write("# MVP Petroleo! :oil_drum: ")
-petroleo_base = pd.read_csv("https://raw.githubusercontent.com/Raphabal/techchallenge04deploy/main/BDBase.csv", sep=';')
+petroleo_base = pd.read_csv("https://raw.githubusercontent.com/Raphabal/techchallenge04deploy/main/BDBase.csv", sep=';' encoding="latin-1", decimal=',', thousands=".", dayfirst=True))
 previsao_base = pd.read_csv("https://raw.githubusercontent.com/Raphabal/techchallenge04deploy/main/base_predicao.csv", sep=';')
 
 st.write("## Grafico de preços do petroleo ao longo dos anos! :chart_with_upwards_trend:")
