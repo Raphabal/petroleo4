@@ -14,6 +14,7 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
+import pandas as pd
 
 LOGGER = get_logger(__name__)
 st.write("# MVP Petroleo! :oil_drum: ")
