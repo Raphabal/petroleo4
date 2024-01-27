@@ -36,7 +36,7 @@ st.line_chart(data=previsao_base['valor'])
 
 st.write(" Tabela de preços do petroleo ao longo dos anos! :dollar:")
 st.dataframe(data=petroleo_base['valor'])
-st.dataframe(previsao_base['yhat'])
+st.dataframe(previsao_base['valor'])
 
 
 def run():
